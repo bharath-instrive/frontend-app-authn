@@ -8,7 +8,7 @@ const messages = defineMessages({
   },
   'with.site.name': {
     id: 'with.site.name',
-    defaultMessage: 'with {siteName} powered by Instrive',
+    defaultMessage: 'with {siteName} powered by Unknown',
     description: 'Header text with site name for logistration MFE pages',
   },
 });
