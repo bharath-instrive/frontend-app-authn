@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { useEffect } from 'react';
+
 import { getConfig } from '@edx/frontend-platform';
 import { FormattedMessage, useIntl } from '@edx/frontend-platform/i18n';
 import { Alert } from '@openedx/paragon';
@@ -11,6 +13,17 @@ import messages from './messages';
 
 const AccountActivationMessage = ({ messageType }) => {
   const { formatMessage } = useIntl();
+
+  useEffect(() => {
+    if (!messageType) {
+      const timer = setTimeout(() => {
+        window.location.href = 'https://corporate.lexconx.com';
+      }, 1000);
+
+      return () => clearTimeout(timer);
+    }
+    return undefined;
+  }, [messageType]);
 
   if (!messageType) {
     return null;
