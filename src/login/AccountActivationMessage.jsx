@@ -15,9 +15,9 @@ const AccountActivationMessage = ({ messageType }) => {
   const { formatMessage } = useIntl();
 
   useEffect(() => {
-    if (!messageType) {
+    if (messageType) {
       const timer = setTimeout(() => {
-        window.location.href = 'https://corporate.lexconx.com';
+        window.location.href = `https://corporate.lexconx.com?account_activation_status=${messageType}`;
       }, 1000);
 
       return () => clearTimeout(timer);
