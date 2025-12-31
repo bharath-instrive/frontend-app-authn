@@ -14,14 +14,6 @@ import messages from './messages';
 const AccountActivationMessage = ({ messageType }) => {
   const { formatMessage } = useIntl();
 
-  useEffect(() => {
-    if (messageType) {
-      window.location.href = `https://corporate.lexconx.com/login?account_activation_status=${messageType}`;
-      return () => clearTimeout(timer);
-    }
-    return undefined;
-  }, [messageType]);
-
   if (!messageType) {
     return null;
   }

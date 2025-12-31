@@ -122,6 +122,14 @@ const LoginPage = (props) => {
     }
   }, [thirdPartyErrorMessage]);
 
+  useEffect(() => {
+    if (activationMsgType) {
+      window.location.href = `https://corporate.lexconx.com?account_activation_status=${activationMsgType}`;
+      return;
+    }
+    return undefined;
+  }, [activationMsgType]);
+
   const validateFormFields = (payload) => {
     const { emailOrUsername, password } = payload;
     const fieldErrors = { ...errors };
@@ -189,6 +197,49 @@ const LoginPage = (props) => {
     if (provider) {
       return <EnterpriseSSO provider={provider} />;
     }
+  }
+
+  // Show loader if activation message type is defined
+  if (activationMsgType) {
+    return (
+      <div style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: 'white',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 9999
+      }}>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '16px'
+        }}>
+          <div style={{
+            width: '40px',
+            height: '40px',
+            border: '3px solid #f3f3f3',
+            borderTop: '3px solid #007bff',
+            borderRadius: '50%',
+            animation: 'spin 1s linear infinite'
+          }} />
+          <style>
+            {`
+              @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+              }
+            `}
+          </style>
+          <div>Loading...</div>
+        </div>
+      </div>
+    );
   }
 
   if (institutionLogin) {
