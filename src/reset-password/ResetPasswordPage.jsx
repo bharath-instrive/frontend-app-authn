@@ -140,7 +140,8 @@ const ResetPasswordPage = (props) => {
   } else if (props.status === PASSWORD_RESET_ERROR) {
     navigate(updatePathWithQueryParams(RESET_PAGE));
   } else if (props.status === 'success') {
-    navigate(updatePathWithQueryParams(LOGIN_PAGE));
+    // navigate(updatePathWithQueryParams(LOGIN_PAGE));
+    window.location.href = 'https://corporate.lexconx.com';
   } else {
     return (
       <BaseContainer>
