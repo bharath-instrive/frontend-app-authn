@@ -469,6 +469,19 @@ html, body, #root {
   font-family: sans-serif;
 }
 
+.logistration-wrapper {
+  background: $white;
+  /* two-directional soft blue shadows: left and right */
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    -400px 400px 143px 90px rgba(122, 185, 250, 0.45),
+    400px 400px 143px 90px rgba(122, 185, 250, 0.45);
+  /* round only top-left and bottom-right corners */
+  border-radius: 3rem 0 3rem 0;
+  padding: 2rem;
+}
+
 /* Apply card look to the full registration and sign-in forms */
 #registration-form,
 #sign-in-form {
