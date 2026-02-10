@@ -92,7 +92,8 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
   font-size: 0.875rem;
   line-height: 1.5;
   height: 2.75rem;
-
+  border-radius: 0.5rem; /* rounded inputs */
+  transition: box-shadow 0.15s ease-in-out;
 }
 
 .btn-social {
@@ -245,6 +246,7 @@ $elevation-level-2-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
 
 select.form-control {
   background: none !important;
+  border-radius: 0.5rem;
 }
 
 #honor-code p {
