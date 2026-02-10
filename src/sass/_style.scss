@@ -459,3 +459,49 @@ select.form-control {
 .pgn__form-control-decorator-trailing {
   right: 0 !important;
 }
+
+// Custom UI tweaks requested: background, font, form cards, and button radii
+// NOTE: keep existing comments and code; only adding overrides below
+
+html, body, #root {
+  background: $white !important;
+  min-height: 100%;
+  font-family: sans-serif;
+}
+
+/* Apply card look to the full registration and sign-in forms */
+#registration-form,
+#sign-in-form {
+  background: $white;
+  /* two-directional soft blue shadows: left and right */
+  box-shadow: -400px 400px 143px 90px rgba(122, 185, 250, 0.45),
+              400px 400px 143px 90px rgba(122, 185, 250, 0.45);
+  /* round only top-left and bottom-right corners */
+  border-radius: 0.5rem 0 0.5rem 0;
+  padding: 1.5rem;
+}
+
+/* Ensure forms inside the usual mw-xs wrapper remain centered */
+.mw-xs > #registration-form,
+.mw-xs > #sign-in-form,
+.mw-xs #registration-form,
+.mw-xs #sign-in-form {
+  margin: 0 auto;
+}
+
+/* Match button border-radius to inputs (inputs use 0.5rem above) */
+.btn,
+.btn-social,
+.register-button,
+.login-button-width,
+.stateful-button,
+.statefulbutton {
+  border-radius: 0.5rem !important;
+}
+
+/* Left-side heading color override for "Start learning with <site>" */
+.main-heading,
+.main-heading .text-accent-a {
+  color: #e75e28 !important;
+}
+
