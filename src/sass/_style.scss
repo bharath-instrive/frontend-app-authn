@@ -472,11 +472,11 @@ html, body, #root {
 .logistration-wrapper {
   background: $white;
   /* two-directional soft blue shadows: left and right */
-  box-shadow: 
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06),
-    -400px 400px 143px 90px rgba(122, 185, 250, 0.45),
-    400px 400px 143px 90px rgba(122, 185, 250, 0.45);
+  // box-shadow: 
+  //   0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  //   0 2px 4px -1px rgba(0, 0, 0, 0.06),
+  //   -400px 400px 143px 90px rgba(122, 185, 250, 0.45),
+  //   400px 400px 143px 90px rgba(122, 185, 250, 0.45);
   /* round only top-left and bottom-right corners */
   border-radius: 4rem 0 4rem 0;
   padding: 2rem;
@@ -515,6 +515,6 @@ html, body, #root {
 /* Left-side heading color override for "Start learning with <site>" */
 .main-heading,
 .main-heading .text-accent-a {
-  color: #e75e28 !important;
+  color: #142035 !important;
 }
 

@@ -4,3 +4,11 @@
 @import "~@edx/brand/paragon/overrides";
 
 @import "sass/style";
+
+:root {
+  --pgn-font-family-base: 'General Sans', sans-serif;
+}
+
+body {
+  font-family: var(--pgn-font-family-base);
+}
