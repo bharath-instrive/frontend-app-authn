@@ -20,7 +20,7 @@ const LargeLayout = () => {
           <div className={classNames({ 'large-yellow-line mr-n4.5': getConfig().SITE_NAME === 'edX' })} />
           <h1
             className={classNames(
-              'display-2 text-accent-a mw-xs main-heading',
+              'display-1 text-accent-a mw-xs main-heading',
               { 'ml-6': getConfig().SITE_NAME !== 'edX' },
             )}
           >
